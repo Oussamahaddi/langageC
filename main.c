@@ -5,7 +5,7 @@
 int main() {
 
     // Types of variables ::
-
+//wjh zok
 
     //==============> Entier (int / long) <================
 
