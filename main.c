@@ -4,8 +4,7 @@
 
 int main() {
 
-    // Types of variables ::
-//wjh zok
+    // Types of variables ::s
 
     //==============> Entier (int / long) <================
 
@@ -98,9 +97,7 @@ int main() {
 
     // switch / case
 
-    char day;
-    
-    day = 'f';
+    char day = 'f';
 
     switch (day) {      // on utilise switch quand on es bien connu les valeurs
         case 'm' :
@@ -116,9 +113,6 @@ int main() {
             printf("les autres jours ne sont pas connu \n");
             break;
     }
-
-
-
 
 
     return 0;
