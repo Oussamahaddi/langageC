@@ -10,28 +10,32 @@ int main() {
 
 // calculatrice scientifique ::
 
-    float A , B;
+    double A , B;
     int op;
-    char P;
+    char stop;
     double S, n, ta, co, si;
     float longeur, largeur, C;
-    char T;
+
+    int N, fac, i;
 
     do {
         printf("------------ Calculatrice Scientifique ------------ \n");
         printf("1 - power \n");
         printf("2 - square \n");
-        printf("3 - trigonometrie \n");
+        printf("3 - Surface \n");
+        printf("4 - factoriel \n");
+        printf("5 - cos \n");
+        printf("6 - sin \n");
+        printf("7 - Tan \n");
         printf("choiser l'operation que tu veux : ");
         scanf("%d", &op);
-
         switch (op) {
             case 1 :
                 printf("Enter nombre A : ");
-                scanf("%f", &A);
+                scanf("%lf", &A);
                 printf("Enter nombre B : ");
-                scanf("%f", &B);
-                printf("A ^ B = %.2f \n", pow(A, B));
+                scanf("%lf", &B);
+                printf("A ^ B = %.2lf \n", pow(A, B));
                 break;
             case 2 :
                 printf("Enter nombre S : ");
@@ -42,11 +46,7 @@ int main() {
                 printf("1 - rectangle \n");
                 printf("2 - triangle \n");
                 printf("3 - care \n");
-                printf("4 - cos \n");
-                printf("5 - sin \n");
-                printf("6 - Tan \n");
-                printf("Entrer le type de forma : ");
-                scanf("%d", &op);
+                
                 switch (op) {
                     case 1 :
                         printf("Entrer longeur de rectangle : ");
@@ -67,25 +67,35 @@ int main() {
                         scanf("%f", &C);
                         printf("La surface de care est : %.2f \n", pow(C, 2));
                         break;
-                    case 4 :
-                        printf("Enter numbre n : ");
-                        scanf("%lf", &n);
-                        printf("cos(%.2lf) = %.2lf \n", n, cos(n));
-                        break;
-                    case 5 :
-                        printf("Enter numbre n : ");
-                        scanf("%lf", &n);
-                        printf("sin(%.2lf) = %.2lf \n", n, sin(n));
-                        break;
-                    case 6 :
-                        printf("Enter numbre n : ");
-                        scanf("%lf", &n);
-                        printf("tan(%.2lf) = %.2lf \n", n, tan(n));
-                        break;
                     default :
                         printf("You didnt enter the correct operation \n");
                         break;
                 }
+                break;
+            case 4 :
+                int n, fac;
+                printf("Entrer le nombre que tu veux facotier : ");
+                scanf("%d", &n);
+                fac = 1;
+                for(int i=1; i <= n; i++){
+                    fac = fac * i;
+                };
+                printf("la factoriel de %d est : %d \n",n , fac);
+                break;  
+            case 5 :
+                printf("Enter numbre n : ");
+                scanf("%lf", &n);
+                printf("cos(%.2lf) = %.2lf \n", n, cos(n));
+                break;
+            case 6 :
+                printf("Enter numbre n : ");
+                scanf("%lf", &n);
+                printf("sin(%.2lf) = %.2lf \n", n, sin(n));
+                break;
+            case 7 :
+                printf("Enter numbre n : ");
+                scanf("%lf", &n);
+                printf("tan(%.2lf) = %.2lf \n", n, tan(n));
                 break;
             default :
                 printf("Sorry you didnt Enter the correct number \n");
@@ -93,8 +103,8 @@ int main() {
         }
 
         printf("Tu veux quitter le programme (Y/N) : ");
-        scanf("%s", &P);
-    } while (P != 'Y');
+        scanf("%s", &stop);
+    } while (stop != 'Y');
 
 
     return 0;
