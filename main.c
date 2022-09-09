@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <time.h>
+#include <math.h>
 
 
 int main() {
@@ -15,6 +17,8 @@ int main() {
     int nome_variable;    // declartion 
     nome_variable = 18;    // initialization
     int yearOfGradtion = 2022;    // declartion and initialization
+
+    // quand on utilise int et long
 
     int score = 100; // Integer (< 6)
     printf("my score is : %d\n" , score);
@@ -141,7 +145,7 @@ int main() {
     
     day = 'f';
 
-    switch (day) {      // on utilise switch quand on es bien connu les valeurs
+    switch (day) {      // on utilise switch quand on es bien connu les valeurs et quand on a un seul variable
         case 'm' :
             printf("premier jour dans la semain \n");
             break;
@@ -277,6 +281,30 @@ int main() {
         res = number * c;
         printf("%d * %d = %d \n", number, c, res);
     }
+
+
+
+    // Exercise ::
+
+    int N, tentative;
+    tentative = 5;
+
+    srand(time(NULL));
+    int random = rand() + 1;
+
+    printf("-------------------- Game -------------------");
+
+    do {
+        printf("guess the number : ");
+        scanf("%d", &N);
+    } while (tentative > 5);
+
+    if (tentative > 5) {
+        printf("sorry tu as passer le nombre de tentative max ");
+        printf("Le nomber et %d \n", random);
+    } 
+
+    
 
 
     return 0;
