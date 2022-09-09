@@ -9,6 +9,7 @@ int main() {
 
     float A , B;
     char op, P;
+    int X, Y;
 
 
     // Normal calculatrice :: 
@@ -41,6 +42,9 @@ int main() {
                     } while (B == 0);
                     printf("A / B = %.2f \n", A / B);
                 }
+                break;
+            case '%' :
+                printf("A %% B = %d \n", X % Y);
                 break;
             default :
                 printf("Sorry you didnt Enter the correct number \n");
