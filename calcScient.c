@@ -13,10 +13,7 @@ int main() {
     double A , B;
     int op;
     char stop;
-    double S, n, ta, co, si;
-    float longeur, largeur, C;
-
-    int N, fac, i;
+    double S;
 
     do {
         printf("------------ Calculatrice Scientifique ------------ \n");
@@ -46,7 +43,9 @@ int main() {
                 printf("1 - rectangle \n");
                 printf("2 - triangle \n");
                 printf("3 - care \n");
-                
+                printf("Enter type de forme que tu besoin : ");
+                scanf("%d", &op);
+                float longeur, largeur, C;
                 switch (op) {
                     case 1 :
                         printf("Entrer longeur de rectangle : ");
@@ -73,29 +72,32 @@ int main() {
                 }
                 break;
             case 4 :
-                int n, fac;
+                int nombre, fac;
                 printf("Entrer le nombre que tu veux facotier : ");
-                scanf("%d", &n);
+                scanf("%d", &nombre);
                 fac = 1;
-                for(int i=1; i <= n; i++){
+                for(int i=1; i <= nombre; i++){
                     fac = fac * i;
                 };
-                printf("la factoriel de %d est : %d \n",n , fac);
+                printf("la factoriel de %d est : %d \n",nombre , fac);
                 break;  
             case 5 :
+                double n, co;
                 printf("Enter numbre n : ");
                 scanf("%lf", &n);
                 printf("cos(%.2lf) = %.2lf \n", n, cos(n));
                 break;
             case 6 :
+                double n2, si;
                 printf("Enter numbre n : ");
-                scanf("%lf", &n);
-                printf("sin(%.2lf) = %.2lf \n", n, sin(n));
+                scanf("%lf", &n2);
+                printf("sin(%.2lf) = %.2lf \n", n2, sin(n2));
                 break;
             case 7 :
+                double ta, n3;
                 printf("Enter numbre n : ");
-                scanf("%lf", &n);
-                printf("tan(%.2lf) = %.2lf \n", n, tan(n));
+                scanf("%lf", &n3);
+                printf("tan(%.2lf) = %.2lf \n", n3, tan(n3));
                 break;
             default :
                 printf("Sorry you didnt Enter the correct number \n");
