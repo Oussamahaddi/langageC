@@ -10,10 +10,9 @@ int main() {
 
 // calculatrice scientifique ::
 
-    double A , B;
+    double A , B, Sq;
     int op;
     char stop;
-    double S;
 
     do {
         printf("------------ Calculatrice Scientifique ------------ \n");
@@ -36,16 +35,19 @@ int main() {
                 break;
             case 2 :
                 printf("Enter nombre S : ");
-                scanf("%lf", &S);
-                printf("race(%.2lf) = %.2lf \n",S, sqrt(S));
+                scanf("%lf", &Sq);
+                printf("race(%.2lf) = %.2lf \n",Sq, sqrt(Sq));
                 break;
             case 3 :
                 printf("1 - rectangle \n");
                 printf("2 - triangle \n");
                 printf("3 - care \n");
+                printf("4 - circle \n");
                 printf("Enter type de forme que tu besoin : ");
                 scanf("%d", &op);
-                float longeur, largeur, C;
+
+                float longeur, largeur, Cote, r, surface;
+                
                 switch (op) {
                     case 1 :
                         printf("Entrer longeur de rectangle : ");
@@ -63,8 +65,14 @@ int main() {
                         break;
                     case 3 :
                         printf("Entrer la cote de caree : ");
-                        scanf("%f", &C);
-                        printf("La surface de care est : %.2f \n", pow(C, 2));
+                        scanf("%f", &Cote);
+                        printf("La surface de care est : %.2f \n", pow(Cote, 2));
+                        break;
+                    case 4 :
+                        printf("Entrer le rayon de circle : ");
+                        scanf("%f", &r);
+                        surface = (3.14 * pow(r, 2)) / 2;
+                        printf("la surface de circle est : %.2f \n", surface);
                         break;
                     default :
                         printf("You didnt enter the correct operation \n");
@@ -107,6 +115,9 @@ int main() {
         printf("Tu veux quitter le programme (Y/N) : ");
         scanf("%s", &stop);
     } while (stop != 'Y');
+
+    if (stop == 'Y') 
+        printf("Good By \n");
 
 
     return 0;
