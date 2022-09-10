@@ -1,16 +1,28 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <time.h>
+#include <math.h>
 
 
 int main() {
 
+<<<<<<< HEAD
     // Types of variables ::s
+=======
+    
 
-    //==============> Entier (int / long) <================
+//===========================> Les Variables <=======================================
+
+    // Types of variables ::
+>>>>>>> 328e4ebe25094a7712bfb7bb175bd76fde90c305
+
+    //======> Entier (int / long) <======
 
     int nome_variable;    // declartion 
     nome_variable = 18;    // initialization
     int yearOfGradtion = 2022;    // declartion and initialization
+
+    // quand on utilise int et long
 
     int score = 100; // Integer (< 6)
     printf("my score is : %d\n" , score);
@@ -19,8 +31,7 @@ int main() {
 
 
 
-
-    //==============> caractere / chaine de caractere (char) <================
+    //======> Caractere / chaine de caractere (char) <======
 
     char FirstNameLetter = 'R'; // single char
     char FullName[] = "Rabie"; // array of chars 
@@ -31,7 +42,7 @@ int main() {
 
 
 
-    //=============> Reel (float) <================
+    //======> Reel (float) <======
 
     float FloatNumber = 3.03; // 6 to 7 digits 
     double DouleNumber = 7.0856444645600004; // up to 16 digits
@@ -42,20 +53,25 @@ int main() {
 
 
 
-    //==============> Booleans (true / false) <================
+    //=======> Booleans (true / false) <=========
 
     bool isTrue = true;
-    printf("%d\n", isTrue);
+    printf("%d\n", isTrue);   // true return toujour 1;
+
     bool isFalse = false;
-    printf("%d\n", isFalse);
+    printf("%d\n", isFalse);   // false return 0;
 
 
 
-    //==============> Les operateurs <================
 
-    // 1 - Les operateurs arithmetique : +, -, *, /,%, Increment (++), Decrement (--)
+//=============================> Les Operateurs (arithmetique / relationnels) <=======================================
+
+
+    // 1 - Les operateurs arithmetique : +, -, *, /, %, Increment (++), Decrement (--)
     // 2 - Les operateurs relationnels :  Equal (==), Not Equal (!=), Structement superieur (>), Structement inferieur (<) , superieur ou equal (>=), inferieur ou equl (<=)
     // 3 - Les operateurs logique : Ou (||) , Et (&&)
+
+    // Examples :
 
     int grad, yearofbirth = 2004, year = 2022, prix = 70000, prix_annu;
     int a=10 ,b=4 ;
@@ -79,7 +95,20 @@ int main() {
 
 
 
-    //==============> Les Conditions (if/else ||  switch/case) <================
+//===========================> Les Conditions (if/else ||  switch/case) <=======================================
+        
+    // if / else 
+        // syntax ::
+        /*
+            if (condition) {
+                statement 1;
+                statement 2;
+                ...
+            } else {
+                statement 1;
+                ....
+            }
+        */
 
     int x = 10, y = 5, p = 20, n = 40;
 
@@ -96,10 +125,29 @@ int main() {
     else printf("ooooopppppsssss \n");
 
     // switch / case
+        // syntax ::
+        /*
+            int name_variable;
+            nome_variable = value;
+            switch (name_variable) {
+                case 1 :
+                    statement;
+                    break;
+                case 2 :
+                    statement ;
+                    break;
+                .
+                .
+                .
+                default :
+                    statement;
+                    break;
+            }
+        */
 
     char day = 'f';
 
-    switch (day) {      // on utilise switch quand on es bien connu les valeurs
+    switch (day) {      // on utilise switch quand on es bien connu les valeurs et quand on a un seul variable
         case 'm' :
             printf("premier jour dans la semain \n");
             break;
@@ -107,7 +155,7 @@ int main() {
             printf("2eme jour dans la semain \n");
             break;
         case 'f' :
-            printf("aujourd'hui cest le meilleur jour dans le Dieu \n");
+            printf("aujourd'hui cest le meilleur jour \n");
             break;
         default :
             printf("les autres jours ne sont pas connu \n");
@@ -115,5 +163,154 @@ int main() {
     }
 
 
+<<<<<<< HEAD
+=======
+    //========> Example <=========
+
+    int chose;
+    float A, B;
+    char k;
+
+    do {
+        printf("1 - Additionnel \n");
+        printf("2 - Sustraction \n");
+        printf("3 - Multiplication \n");
+        printf("4 - Division \n");
+        printf("choiser l'operation que tu veux : ");
+        scanf("%d", &chose);
+
+        switch (chose) {
+            case 1 :
+                printf("Enter number A : ");
+                scanf("%f", &A);
+                printf("Enter number B : ");
+                scanf("%f", &B);
+                printf("A + B = %.2f \n", A + B);
+                break;
+            case 2 :
+                printf("Enter number A : ");
+                scanf("%f", &A);
+                printf("Enter number B : ");
+                scanf("%f", &B);
+                printf("A - B = %.2f \n", A - B);
+                break;
+            case 3 :
+                printf("Enter number A : ");
+                scanf("%f", &A);
+                printf("Enter number B : ");
+                scanf("%f", &B);
+                printf("A * B = %.2f \n", A * B);
+                break;
+            case 4 :
+                printf("Enter number A : ");
+                scanf("%f", &A);
+                printf("Enter number B : ");
+                scanf("%f", &B);
+                printf("A / B = %.2f \n", A / B);
+                break;
+            default :
+                printf("Sorry you didnt Enter the correct number \n");
+                break;
+        }
+        
+        printf("Tu veux quiter le programe Y/N : ");
+        scanf("%s", &k);
+    } while (k != 'Y');
+
+
+
+//===========================> Les Boucles (while || do / while || for) <=======================================
+
+    //========> While <=========
+        // Syntax ::
+        /*
+            int i = start;
+            while (i <= end) {
+                statement1 ....;
+                i++;
+            }
+        */
+    
+    // Example ::
+
+    int i = 1;
+    while ( i <= 5) {
+        printf("i = %d \n", i);
+        i++;
+    }
+
+    //========> do / while <=========
+    // Syntax ::
+        /*
+            do {
+                statement1 ....;
+            } while (condition);
+        */
+    
+    int N;
+
+    do {
+        printf("Enter number N : ");
+        scanf("%d", &N);
+        printf("N = %d \n", N);
+
+    } while (N <= 20);  // dans ce cas la boucle va s'execute tant que la condition est vrai
+
+    //========> for (break / continue) <=========
+    // Syntax ::
+        /*
+            int i;
+            for (i = 1; condition; increment / decrement) {
+                statement 1 .....
+            }
+        */
+
+    // Example ::
+
+    int r, count;
+    count = 5;
+    for (r = 0; r <= 5; r++) {
+        printf("%d \n", count);
+        count--;
+    }
+
+    // Example avance ::
+
+    int number, c, res;
+
+    printf("Enter random number : ");
+    scanf("%d", &number);
+
+    for (c = 1; c <= 10; c++) {
+        res = number * c;
+        printf("%d * %d = %d \n", number, c, res);
+    }
+
+
+
+    // Exercise ::
+
+    int N, tentative;
+    tentative = 5;
+
+    srand(time(NULL));
+    int random = rand() + 1;
+
+    printf("-------------------- Game -------------------");
+
+    do {
+        printf("guess the number : ");
+        scanf("%d", &N);
+    } while (tentative > 5);
+
+    if (tentative > 5) {
+        printf("sorry tu as passer le nombre de tentative max ");
+        printf("Le nomber et %d \n", random);
+    } 
+
+    
+
+
+>>>>>>> 328e4ebe25094a7712bfb7bb175bd76fde90c305
     return 0;
 };
