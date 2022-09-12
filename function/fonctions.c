@@ -179,36 +179,36 @@ int main() {
 
     do {
 
-    int res;    // for table de multiplication
-    int nombre;
-    int L, C;   // for rect
-    int n, r;  // for triangle
-    int c, p;  // triangle vide
+        int res;    // for table de multiplication
+        int nombre;
+        int L, C;   // for rect
+        int n, r;  // for triangle
+        int c, p;  // triangle vide
 
-    
+        
 
-    // tableau de multiplication
-    // multiple(res);
+        // tableau de multiplication
+        // multiple(res);
 
-    type();
+        type();
 
-    switch (op) {
-        case 1 :    // rectangle
-            rect(L, C);
-            break;
-        case 2 :    // triangle
-            triangle(n, r);
-            break;
-        case 3 :    // circle
-            vide_triangle(p);
-            break;
-        case 4 :
-            vide_care(L, C);
-            break;
-        default :
-            printf("Sooooooorrrrrrrrrryyyyyyyyy \n");
-            break;
-    }
+        switch (op) {
+            case 1 :    // rectangle
+                rect(L, C);
+                break;
+            case 2 :    // triangle
+                triangle(n, r);
+                break;
+            case 3 :    // circle
+                vide_triangle(p);
+                break;
+            case 4 :
+                vide_care(L, C);
+                break;
+            default :
+                printf("Sooooooorrrrrrrrrryyyyyyyyy \n");
+                break;
+        }
 
     } while (stop(a) != 'Y');
 
