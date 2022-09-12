@@ -6,15 +6,11 @@
 
 int main() {
 
-<<<<<<< HEAD
-    // Types of variables ::s
-=======
     
 
 //===========================> Les Variables <=======================================
 
     // Types of variables ::
->>>>>>> 328e4ebe25094a7712bfb7bb175bd76fde90c305
 
     //======> Entier (int / long) <======
 
@@ -145,7 +141,9 @@ int main() {
             }
         */
 
-    char day = 'f';
+    char day;
+    
+    day = 'f';
 
     switch (day) {      // on utilise switch quand on es bien connu les valeurs et quand on a un seul variable
         case 'm' :
@@ -163,8 +161,6 @@ int main() {
     }
 
 
-<<<<<<< HEAD
-=======
     //========> Example <=========
 
     int chose;
@@ -311,6 +307,5 @@ int main() {
     
 
 
->>>>>>> 328e4ebe25094a7712bfb7bb175bd76fde90c305
     return 0;
 };
