@@ -102,7 +102,7 @@ int triangle(int n, int r) {
 
     for (i = 1; i <= r; i++) {
         for (int k = 0; k <= n; k++) {
-            for (j = 1; j <= n - k; j++) {
+            for (j = 1; j <= (n + r) - k; j++) {
                 printf(" ");
             }
             for (j = 1; j <= 2*k + 1; j++) {
@@ -110,7 +110,7 @@ int triangle(int n, int r) {
             }
             printf("\n");
         }
-        n+=2;
+        n++;
     }
 
     return n, r;
@@ -120,7 +120,7 @@ int triangle(int n, int r) {
 
 int vide_triangle(int p) {
 
-    printf("Entrer nombre de ligne de cicle : ");
+    printf("Entrer nombre de ligne de triangle : ");
     scanf("%d", &p);
 
     for (i = 1; i <= p; i++) {

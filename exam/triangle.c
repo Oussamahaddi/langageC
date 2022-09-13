@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int main() {
-
+/*
     int N, i, j, r, z, repet;
 
     printf("--------------- Design Triangle --------------- \n");
@@ -24,6 +24,28 @@ int main() {
 
             printf("\n");     // lespace pour revien a la line a chaque fois quand on a fini la premier 
         }
+    }
+*/
+
+
+    int i,j,k,r, n;
+
+    printf("nombre : ");
+    scanf("%d %d", &n, &r);
+
+
+    for (int z = 1; z <= r; z++) {
+        for (i = 0; i < n; i++) {
+            for (k = n; k >= i; k--) {
+                printf(" ");
+            } 
+            for (j = 1; j <= 2*i+1; j++) {
+                printf("*");
+            }
+            printf("\n");
+            n - i;
+        }
+        n++;
     }
 
 
