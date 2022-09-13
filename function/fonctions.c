@@ -59,7 +59,7 @@ int multiple(long res) {
 // creer un fonction qui demmande a l'utilisateur type de dessin
 
 int op;
-int i, j;
+int i, j, k;
 
 void type() {
 
@@ -94,14 +94,18 @@ int rect(int L, int C) {
 // triangle
 
 int triangle(int n, int r) {
-
+    
     printf("Enter nombre de ligne n : ");
     scanf("%d", &n);
     printf("Enter combien tu veux repeter ce triangle : ");
     scanf("%d", &r);
 
     for (i = 1; i <= r; i++) {
+<<<<<<< HEAD
         for (int k = 0; k <= n; k++) {
+=======
+        for (k = 0; k <= n; k++) {
+>>>>>>> 0570dcc7a9e94883e7cf5b171723e198974612bb
             for (j = 1; j <= (n + r) - k; j++) {
                 printf(" ");
             }
@@ -182,7 +186,7 @@ int main() {
         int res;    // for table de multiplication
         int nombre;
         int L, C;   // for rect
-        int n, r;  // for triangle
+        int n, r, z;  // for triangle
         int c, p;  // triangle vide
 
         
