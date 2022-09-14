@@ -139,7 +139,7 @@ int main() {
 
     int firstTable[5];
     int croissant;
-    croissant = firstTable[0];      // on donne la variable la premier valeur dans le tableau pour le comparer avec les autres;
+    croissant = firstTable[0];      // on donne la variable premier valeur dans le tableau pour le comparer avec les autres;
     for (i = 0; i < 5; i++) {       // saiser les valeur de la premier tableau;
         printf("fT[%d] = ", i + 1);
         scanf("%d", &firstTable[i]);
@@ -157,40 +157,88 @@ int main() {
     for (i = 0; i < 5; i++) {
         printf("sT[%d] = %d \n", i, firstTable[i]);
     }
-*/
+
+    ///////////////////////////// tri par insertion
+
+    int T[10];
+    int swp;
     
+    for (i = 0; i < 10; i++) {
+        printf("T[%d] = ", i+1);
+        scanf("%d", &T[i]);
+    }
+    
+    printf("Tri par insertion \n");
+    for (i = 1; i < 10; i++) {
+        
+            j = i;
+
+            while (j > 0 && T[j - 1] > T[j]) {
+                swp = T[j];
+                T[j] = T[j - 1];
+                T[j - 1] = swp;
+
+                j--;
+            }
+        
+    }
+    for (i = 0; i < 10; i++) {
+        printf("T[%d] = %d \n", i + 1, T[i]);
+    }
 
 
 
     // ajouter un nombre dans le tableau avec la pos
 
-    int T[10];
+    int T[100];
     int N, pos, taille;
-    
-    printf("Enter la taille de tableau : ");
-    scanf("%d", &taille);
 
+    printf("Entrer taille de tableau : ");
+    scanf("%d", &taille);
+    
     for (i = 0; i < taille; i++) {
-        printf("T[%d] = ", i+1);
+        printf("T[%d] = ", i + 1);
         scanf("%d", &T[i]);
     }
 
-    printf("Enter numbre N : ");
+    printf("Enter nombre N : ");
     scanf("%d", &N);
-    printf("Enter ca position : ");
+    printf("Entrer ca position : ");
     scanf("%d", &pos);
 
-    if (pos <= 0 || pos > taille + 1)
-        printf("Erreur il faut entrer la position entre 1 et %d \n", taille);
-    else {
-        for (i = taille ; i >= pos; i--) {
-            T[i] = T[i - 1];
+    for (i = taille; i >= pos; i--) {
+        T[i] = T[i - 1];
+    }
+    T[pos - 1] = N;
+    taille++;
+    for (i = 0; i < taille; i++) {
+        printf("T[%d] = %d \n", i + 1, T[i]);
+    }
+*/
+
+    // Recherch par Dichotomique
+
+    int cmp = 0;
+    int T[6];
+
+    for (i = 0; i < 6; i++) {
+        printf("T[%d] = ", i + 1);
+        scanf("%d", &T[i]);
+    }
+
+    for (i = 0; i < 6; i++) {
+        for (j = 1; j < 6; j++) {
+            if (T[i] > T[j]) {
+                cmp++;
+            }
+            int swp = T[j];
+            T[j] = T[cmp];
+            T[i] = swp;
         }
-        T[pos - 1] = N;
-        taille++;
-        for (i = 0; i < taille; i++) {
-            printf("T[%d] = %d \n", i + 1, T[i]);
-        }
+        
+    }
+    for (i = 0; i < 6; i++) {
+        printf("T[%d] = %d \n", i + 1, T[i]);
     }
 
 
