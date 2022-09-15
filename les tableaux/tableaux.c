@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <stdbool.h>
 #include <time.h>
 #include <math.h>
@@ -17,6 +16,12 @@
             --- scanf("% ", &nom_tableaux[taile]);
         
 */
+
+void swap(int* x, int* y) {
+    int swp = *x;
+    *x = *y;
+    *y = swp;
+};
 
 int main() {
 
@@ -218,28 +223,57 @@ int main() {
 
     // Recherch par Dichotomique
 
-    int cmp = 0;
-    int T[6];
 
-    for (i = 0; i < 6; i++) {
+    int min, max, mid, cherche, taille;
+    min = 0;
+    max = taille;
+    mid = (min + max) / 2;
+
+    printf("Entrer la taille de tableau : ");
+    scanf("%d", &taille);
+
+    int Table[taille];
+
+    for (i = 0; i < taille; i++) {          // saiser les valeur de tableau 
         printf("T[%d] = ", i + 1);
-        scanf("%d", &T[i]);
+        scanf("%d", &Table[i]);
     }
 
-    for (i = 0; i < 6; i++) {
-        for (j = 1; j < 6; j++) {
-            if (T[i] > T[j]) {
-                cmp++;
-            }
-            int swp = T[j];
-            T[j] = T[cmp];
-            T[i] = swp;
+    printf("Tri par insertion \n");
+
+    for (i = 1; i < taille; i++) {              // tri le tableau en ordre croissant
+        j = i; 
+        while (j > 0 && Table[j - 1] > Table[j]) {
+            swap(&Table[j - 1], &Table[j]);
+            j--;
         }
-        
     }
-    for (i = 0; i < 6; i++) {
-        printf("T[%d] = %d \n", i + 1, T[i]);
+
+    for (i = 0; i < taille; i++) {
+        printf("T[%d] = %d \n", i+1, Table[i]);
     }
+
+    int min, max, mid, cherche, taille;
+    min = 0;
+    max = taille;
+    mid = (min + max) / 2;
+
+    printf("Entrer le nombre que tu besoin : ");
+    scanf("%d", &cherche);
+
+    if (Table[mid] != cherche) {
+        if (cherche < Table[mid]) {
+            max = Table[mid] - 1;
+            mid = (min + max) / 2;
+        }
+        else {
+            min = mid + 1;
+            mid = (min + max) / 2;
+        }
+    } else {
+        printf("True");
+    }
+
 
 
 
