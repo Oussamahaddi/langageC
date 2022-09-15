@@ -214,7 +214,7 @@ int main() {
     for (i = 0; i < taille; i++) {
         printf("T[%d] = %d \n", i + 1, T[i]);
     }
-*/
+
 
     // Recherch par Dichotomique
 
@@ -240,8 +240,22 @@ int main() {
     for (i = 0; i < 6; i++) {
         printf("T[%d] = %d \n", i + 1, T[i]);
     }
+*/
+    
+    int T[7] = {9, 6, 33, -6, 3, 1, 16};
 
-
+    for (i = 0; i < 7 - 1; i++) {
+        for (j = i + 1; j < 7; j++) {
+            if (T[i] > T[j]) {
+                int swp = T[i];
+                T[i] = T[j];
+                T[j] = swp;
+            }
+        }
+    }
+    for (i = 0; i < 7; i++) {
+        printf("T[%d] =  %d \n", i+1, T[i]);
+    }
 
 
 
