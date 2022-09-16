@@ -18,9 +18,6 @@ int main() {
     min = 0;
     max = taille;
     
-
-    
-    
     printf("Entrer la taille de tableau : ");
     scanf("%d", &taille);
 
