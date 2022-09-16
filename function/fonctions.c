@@ -101,11 +101,7 @@ int triangle(int n, int r) {
     scanf("%d", &r);
 
     for (i = 1; i <= r; i++) {
-<<<<<<< HEAD
-        for (int k = 0; k <= n; k++) {
-=======
         for (k = 0; k <= n; k++) {
->>>>>>> 0570dcc7a9e94883e7cf5b171723e198974612bb
             for (j = 1; j <= (n + r) - k; j++) {
                 printf(" ");
             }
