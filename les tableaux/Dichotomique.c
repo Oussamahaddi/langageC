@@ -31,7 +31,7 @@ int main() {
     printf("Entrer ca position : ");
     scanf("%d", &p);
 
-    for (i = taille; i >= p; i--) {
+    for (i = taille; i >= p; i--) {         // ajouter un nombre avec method d'insertion
         Table[i] = Table[i - 1];
     }
     Table[p - 1] = n;
@@ -41,12 +41,12 @@ int main() {
         printf("T[%d] = %d \n", i + 1, Table[i]);
     }
 
-    printf("----------- Tri par insertion -------------- \n");
+    printf("----------- Tri par insertion -------------- \n");         // la methode tri par insertion comment ca fonction  :: on fait un decalage direct a un nombre a ca position mais le problem pour cette method n'utile que pour les petits elements car il besoin plus temps pour trier un grand nombre d'elements
 
-    for (i = 1; i < taille; i++) {           // trier le tableau en ordre croissant
+    for (i = 1; i < taille; i++) {           // trier le tableau en ordre croissant avec methode tri par insertion 
         j = i; 
         while (j > 0 && Table[j - 1] > Table[j]) {
-            swap(&Table[j - 1], &Table[j]);         // Declarer la fonction de swap
+            swap(&Table[j - 1], &Table[j]);         // Declarer la fonction de swap 
             j--;
         }
     }
@@ -62,7 +62,7 @@ int main() {
     max = taille;
     int cmp = 0;
 
-    while (cmp > 0 && min <= max) {
+    while (cmp > 0 && min <= max) {           // cherche par methode Dichotomique ou ce qu'on appel binary ||   cet methode la c'est pour diviser le tableau en demi a chaque fois que le nombre que on recherche se trouve pas jusqu'a la condition et false
         mid = (min + max) / 2;
         if (cherche == Table[mid])
             cmp++;
