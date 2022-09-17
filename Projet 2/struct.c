@@ -72,13 +72,13 @@ int main() {
 
     Personne swp;       // creer un object qui swap les etudient avec tous les information ;
 
-    for (i = 1; i <= student; i++) {            // trier les etudient ce depend de son age
-        for (j = i + 1; j <= student; j++) {
-            if (P[i].age > P[j].age) {
-                swp = P[i];
-                P[i] = P[j];
-                P[j] = swp;
-            }
+    for (i = 1; i <= student; i++) {  
+        j = i;          // trier les etudient ce depend de son age
+        while (j > 0 && P[j - 1].age > P[j].age) {
+            swp = P[j - 1];
+            P[j - 1] = P[j];
+            P[j] = swp;
+            j--;
         }
     }
 
