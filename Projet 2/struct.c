@@ -29,10 +29,14 @@ int calc_Date_Naissance(int year, int month, int day) {     // creer un fonction
     age = CurrentYear - year;
 
     if (month < CurrentMonth) {
+        age++;
+    } else {
         age--;
     }
-    else if (month == CurrentMonth) {
+    if (month == CurrentMonth) {
         if (day < CurrentDay) {
+            age++;
+        } else {
             age--;
         }
     }
